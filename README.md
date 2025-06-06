@@ -1,4 +1,4 @@
-🇦🇿 Proudly made in Azerbaijan by Azad Mirheydarzada
+Made with ❤️ in Azerbaijan by Azad Mirheydarzada.
 
 # 🚀 **azadev-react-toaster**
 
