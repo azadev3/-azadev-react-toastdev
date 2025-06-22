@@ -11,7 +11,6 @@ const normalizeSize = (size?: number) => {
   if (!size || typeof size !== 'number') return undefined;
   return size > 100 ? 24 : size;
 };
-
 /**
  * createNotifyHandlers returns ready-made `success`, `error`, `info` and `warn` functions to participate in creating different types of notifications.
  *
