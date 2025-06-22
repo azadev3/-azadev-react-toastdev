@@ -1,30 +1,32 @@
-Made with ❤️ in Azerbaijan by Azad Mirheydarzada.
+# 🔊 azadev-react-toaster
 
-# 🚀 **azadev-react-toaster**
-
-> *Blazing-fast and customizable toast notifications for modern React apps.* ⚡
+> **Minimal, customizable and now sound-enabled toast notifications for React** — made with ❤️ in Azerbaijan by Azad Mirheydarzada.
 
 ---
 
 ## 🌟 Features
 
-- ⚡ **Lightweight** & fast performance  
-- 🎨 *Highly customizable* styles and animations  
-- 📦 Easy integration with React projects  
-- 🛠️ Supports multiple toast types: `success`, `error`, `info`, `warning`  
-- ⏳ Configurable duration and position  
-- 🌙 Dark mode compatible  
+- ⚡ Super lightweight & blazing fast
+- 🔥 Plug-and-play toast system for modern React projects
+- 🎨 Customizable design with SCSS support
+- 🔊 **Optional sound support** — play a sound automatically on toast trigger!
+- 🧠 Smart toast types: `success`, `error`, `info`, `warning`
+- 🌓 Dark mode compatible
+- ⏱ Configurable duration, position and more
 
 ---
 
-## 🚧 Status
+## 🔈 Sound-Enabled Notifications
 
-> ⚠️ **Work in Progress** — Currently under active development.  
-> Not yet published to npm.
+You can now play a toast sound automatically by passing:
 
----
+```ts
+notify.success({
+  message: "Saved successfully!",
+  sound: true, // 🔊 this will play a sound
+});
 
 ## 💻 Installation
 
-```bash
+bash
 npm install @azadev/react-toaster
