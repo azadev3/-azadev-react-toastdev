@@ -1,0 +1,60 @@
+{
+  "name": "@azadev/react-toastdev",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "Modern React toast notifications with sound support, designed for simplicity and seamless integration.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "toast",
+    "notification",
+    "azadev",
+    "typescript",
+    "scss",
+    "nodejs",
+    "toaster",
+    "toastify",
+    "toasting"
+  ],
+  "author": "Azad Mirheydarzada",
+  "license": "GPL-3.0-only",
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-url": "^8.0.2",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "postcss": "^8.5.3",
+    "postcss-scss": "^4.0.9",
+    "rollup": "^4.41.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-scss": "^4.0.1",
+    "rollup-plugin-url": "^3.0.1",
+    "sass": "^1.89.1",
+    "sass-embedded": "^1.89.1",
+    "typescript": "^5.8.3",
+    "vite-plugin-static-copy": "^3.0.2"
+  },
+  "dependencies": {
+    "motion": "^12.16.0",
+    "react-icons": "^5.5.0"
+  }
+}
