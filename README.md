@@ -1,5 +1,7 @@
 # 🔊 azadev-react-toastdev
 
+> **Bu paket həvəskar developer Azad Mirheydərzadə (azadev) tərəfindən community üçün hazırlanıb.**
+
 > **Minimal, customizable and now sound-enabled toast notifications for React** — made with ❤️ in Azerbaijan by Azad Mirheydarzada.
 
 > **Səsli toast bildirişləri React üçün!** — Azərbaycandan Azad Mirheydarzada tərəfindən hazırlanıb.
