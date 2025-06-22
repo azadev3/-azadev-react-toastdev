@@ -15,7 +15,9 @@
 - 🧠 Smart toast types: `success`, `error`, `info`, `warning`
 - 🎨 Customizable design with SCSS support _(COMING SOON)_
 - 🌓 Dark mode compatible _(COMING SOON)_
-- 🤖 AI Entegration _(TEZLİKLƏ)_
+- 🤖 AI Entegration _(COMING SOON)_
+
+## 🌟 Features (AZ)
 
 - ⚡ Super yüngül və parlaq sürətli
 - 🔥 Müasir React layihələri üçün “Plug-and-play tost” sistemi
