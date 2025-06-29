@@ -1,4 +1,4 @@
-import { GlobalNotifyToastsInterface, NotificationType, Notify, NotifyOptionsInterface } from '../types/notifyTypes';
+import { GlobalNotifyToastsInterface, NotificationType, Notify, NotifyOptionsInterface, NotifyStyleThemes } from '../types/notifyTypes';
 
 const defaultMessages: Record<NotificationType, string> = {
   success: 'Successfully!',
@@ -11,13 +11,17 @@ const normalizeSize = (size?: number) => {
   if (!size || typeof size !== 'number') return undefined;
   return size > 100 ? 24 : size;
 };
+
 /**
  * createNotifyHandlers returns ready-made `success`, `error`, `info` and `warn` functions to participate in creating different types of notifications.
  *
  * @param setToasts - Setter function that adds notifications to the state (useState)
  * @returns an object of type `Notify`. Contains feed boost.
  */
-export function createNotifyHandlers(setToasts: React.Dispatch<React.SetStateAction<GlobalNotifyToastsInterface[]>>): Notify {
+export function createNotifyHandlers(
+  setToasts: React.Dispatch<React.SetStateAction<GlobalNotifyToastsInterface[]>>,
+  toastTheme: NotifyStyleThemes,
+): Notify {
   const createNotifyFn = (type: NotificationType) => {
     return (message?: string, options?: NotifyOptionsInterface) => {
       const id = crypto.randomUUID();
@@ -35,6 +39,9 @@ export function createNotifyHandlers(setToasts: React.Dispatch<React.SetStateAct
             path: options?.icon?.path ?? '',
           },
           sound: options?.sound ?? false,
+          toastClass: options?.toastClass ?? '',
+          position: options?.position ?? 't-right',
+          toastTheme: toastTheme,
         },
       ]);
 

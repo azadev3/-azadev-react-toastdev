@@ -20,12 +20,12 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
+      typescript({ tsconfig: './tsconfig.json' }),
       url({
         include: ['**/*.mp3'],
-        limit: 10 * 1024 * 1024, 
-        emitFiles: false, 
+        limit: 10 * 1024 * 1024,
+        emitFiles: false,
       }),
-      typescript({ tsconfig: './tsconfig.json' }),
       postcss({
         extensions: ['.css', '.scss'],
         extract: false,
@@ -36,7 +36,6 @@ export default [
     ],
     external: ['react', 'react-dom'],
   },
-  // Type declarations
   {
     input: 'src/index.ts',
     output: {

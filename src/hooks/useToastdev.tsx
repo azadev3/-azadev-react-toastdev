@@ -1,18 +1,20 @@
 import { useContext } from "react";
-import { ToastdevContext, ToastdevContextInterface } from "../contexts/ToastdevContext";
-import { NotificationType } from "../types/notifyTypes";
-/**
- * @returns Returns all functions and parameters of your toaster
- */
-export const useToastdev = (): ToastdevContextInterface => {
+import { ToastdevContext } from "../contexts/ToastdevContext";
+import { ToastdevContextInterface } from "../contexts/ToastdevContext";
+
+export const useToastdev = (): ToastdevContextInterface["notify"] => {
   const context = useContext(ToastdevContext);
   if (!context) {
-    throw new Error("Hey Dev! Please use ToastdevProvider! 😎✌️");
+    throw new Error("Hey Dev! Please use <ToastdevProvider>! 😎");
   }
-  return context;
+  return context.notify;
 };
 
-export const useToastdevInternal = (): NotificationType | null => {
-  const context = useContext(ToastdevContext) as ToastdevContextInterface & { __internalType?: NotificationType };
-  return context?.__internalType || null;
+// Internal
+export const useToastdevInternal = (): ToastdevContextInterface["toasts"] => {
+  const context = useContext(ToastdevContext);
+  if (!context) {
+    throw new Error("This hook is for internal use only.");
+  }
+  return context.toasts;
 };
