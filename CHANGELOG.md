@@ -1,67 +1,66 @@
 # Changelog
 
-## [v2.0.0] – 2025-06-29
+## [v2.0.0] – 29.06.2025
 
-### 🚀 Added
+## [EN] CHANGES
 
-- 6 unique themes added (e.g., light-sadelovh, dark-pumping, soft-glow, neon, etc.), each with different style and animation.
-- Full responsive design support for all devices and screen sizes.
-- `useToastdev` hook now supports 3 different usage styles for developer flexibility:
-  1. `const myToast = useToastdev(); myToast.success();`
-  2. `const { success, error, info, warn } = useToastdev(); info("text");`
-  3. `import { toastdev } from '@azadev/react-toastdev'; toastdev.success();`
-- Dual-language JSDoc support: now available in both English and Azerbaijani.
-- Detailed animation effects and shadows added to match toast types.
+### 🟢 Added
 
-### ✨ Changed
+- 5 unique themes have been added. You can choose and use them according to your wishes. Each theme
+  has a different design and animation. Also, animated themes are called "pumping".
+- Themes for dark mode have been added. There are 5 unique themes and 1 is the default
+  and you can use the others. (default: "light-sadelovh")
+- Responsiveness for mobile devices has been added
+- Prototypes such as `position`, `toastClass` have been added. You can easily
+  set the direction of the toast. You can also apply your own `css` codes through the `toastClass` prototype.
+  `NOT`: It is recommended that you check the `!important` keyword if your css codes do not work.
+- `Azerbaijani` language support has been introduced for Doc
 
-- Default theme changed to `light-sadelovh`.
-- Code structure simplified and modularized for better maintenance.
-- Minor animation polishing for entry/exit transitions.
+### 🟡 Changes have been made
 
-### 🐞 Fixed
+- Significant improvements have been made to the usage patterns of the toaster. For example, in the
+  previous version
+  we could only use it by calling it with a hook:
+  `const { notify } = useToastdev();`
+  There are now 3 convenient ways to use it, depending on your preferences.
+  1. `const { success, error, info, warn } = useToastdev(); // you will get 4 main types back`;
+  2. `const myToast = useToastdev(); // assign to a custom variable`;
+  3. `import { toastdev } from "@azadev/react-toastdev" // accessible from anywhere with import`;
+- The `notify` keyword has now been replaced by the main `toastdev` keyword.
 
-- Rare animation conflict that occurred during fast toast stacking.
-- Theme fallback issues when no theme was provided.
+### 🔴 DEPRECATED
 
-### ⚠️ Breaking Changes
+- `notify` keyword is no longer used
+- `ToastdevContext` only holds `ToastdevProvider` in parallel
 
-- Default theme changed (may visually affect projects relying on old default).
-- Custom theme logic has changed — manual theme override may need update.
+## [AZ] DƏYİŞİKLİKLƏR
 
----
+## [v2.0.0] - 29.06.2025
 
-## 🇦🇿 Azərbaycan – DƏYİŞİKLİKLƏR
+### 🟢 Əlavə edildi
 
-```markdown
-# Dəyişikliklər
+- 5 unikal tema əlavə edildi. İstəyinizə uyğun seçərək istifadə edə bilərsiniz. Hər bir tema
+  fərqli dizayn və animasiya daşıyır. Həmçinin animasiyalı olan temalar "pumping" adlanır.
+- Dark mode üçün temalar əlavə edildi. Həmin 5 unikal tema içərisindədir və 1 ədədi default olmaqla
+  digərlərini istifadə edə bilərsiniz. (default: "light-sadelovh")
+- Mobil cihazlar üçün uyğun responsive əlavə edildi
+- `position`, `toastClass` kimi prototiplər əlavə edildi. Siz tostun istiqamətini rahatlıqla
+  təyin edə bilərsiniz. Həmçinin `toastClass` prototipi vasitəsilə özəl `css` kodlarınızı tətbiq edə bilərsiniz.
+  `NOT`: css kodlarınız işləmədiyi halda `!important` açar sözünü yoxlamağınız tövsiyyə olunur.
+- Doc üçün `Azərbaycan` dili dəstəyi gətirildi
 
-## [v2.0.0] – 29-06-2025
+### 🟡 Dəyişiklik edildi
 
-### 🚀 Əlavə edildi
+- Tosterinizin istifadə qaydasında bir sıra dəyişikliklər etdim. Misal üçün, əvvəlki versiyada
+  yalnız hook ilə çağıraraq istifadə edə bilirdik:
+  `const { notify } = useToastdev();`
+  İndi isə 3 əsas yolumuz var. Hansı sizə rahatdırsa, onu istifadə edə bilərsiniz.
+  1. `const { success, error, info, warn } = useToastdev(); // sizə 4 əsas tipi dönəcək`;
+  2. `const myToast = useToastdev(); // fərdiləşdirilmiş dəyişkənə atayın`;
+  3. `import { toastdev } from "@azadev/react-toastdev" // import ilə hər yerdən əlçatan`;
+- `notify` açar sözü indi əsas `toastdev` açar sözü ilə əvəz edilib.
 
-- 6 unikal tema əlavə olundu (məsələn: light-sadelovh, dark-pumping, soft-glow, neon və s.) – hər biri fərqli stil və animasiya ilə.
-- Bütün cihazlar və ekran ölçüləri üçün responsive dizayn dəstəyi əlavə olundu.
-- `useToastdev` hook-u 3 fərqli istifadə formasını dəstəkləyir:
-  1. `const myToast = useToastdev(); myToast.success();`
-  2. `const { success, error, info, warn } = useToastdev(); info("text");`
-  3. `import { toastdev } from '@azadev/react-toastdev'; toastdev.success();`
-- JSDoc sənədlərinə Azərbaycan dili dəstəyi əlavə olundu.
-- Toast növünə uyğun animasiyalar və kölgə effektləri əlavə olundu.
+### 🔴 QALDIRILDI
 
-### ✨ Dəyişdi
-
-- Default tema `light-sadelovh` olaraq dəyişdirildi.
-- Kod strukturu sadələşdirildi və daha modul şəkildə təşkil olundu.
-- Toast-ların çıxış/giriş animasiyalarında kiçik optimizasiya edildi.
-
-### 🐞 Düzəldildi
-
-- Toast-lar ard-arda çox tez çıxanda yaranan nadir animasiya konflikti aradan qaldırıldı.
-- Tema seçilmədikdə fallback problemi düzəldildi.
-
-### ⚠️ Kəskin dəyişikliklər
-
-- Default tema dəyişdirildi (əvvəlki default tema istifadə edən layihələrdə vizual fərqlilik yarana bilər).
-- Xüsusi tema təyin etmə mexanizmi dəyişdi – əllə tema seçənlər kodunu yeniləməlidir.
-```
+- `notify` açar sözü artıq istifadə edilmir
+- `ToastdevContext` paralelində yalnız `ToastdevProvider` saxlayır

@@ -39,9 +39,9 @@ export function createNotifyHandlers(
             path: options?.icon?.path ?? '',
           },
           sound: options?.sound ?? false,
-          toastClass: options?.toastClass ?? '',
-          position: options?.position ?? 't-right',
-          toastTheme: toastTheme,
+          toastClass: options?.toastClass ?? '', // v2
+          position: options?.position ?? 't-right', // v2 
+          toastTheme: toastTheme, // v2
         },
       ]);
 

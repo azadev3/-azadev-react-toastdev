@@ -6,6 +6,16 @@
 
 > **Səsli toast bildirişləri React üçün!** — Azərbaycandan Azad Mirheydarzada tərəfindən hazırlanıb.
 
+> **LAST UPDATE: 29.06.2025** > **SON DƏYİŞİKLİK: 29.06.2025**
+
+**For new changes:**
+
+### 📦 [Changelog](https://github.com/azadev3/-azadev-react-toaster/blob/main/CHANGELOG.md)
+
+**Dəyişikliklər üçün:**
+
+### 📦 [Changelog](https://github.com/azadev3/-azadev-react-toaster/blob/main/CHANGELOG.md)
+
 ---
 
 ## 🌟 Features
@@ -15,9 +25,9 @@
 - 🔊 **Optional sound support** — plays a toast sound automatically when triggered
 - ⏱ Configurable duration and position
 - 🧠 Smart toast types: `success`, `error`, `info`, `warning`
-- 🎨 Customizable design with SCSS support _(COMING SOON)_
-- 🌓 Dark mode compatible _(COMING SOON)_
-- 🤖 AI Entegration _(COMING SOON)_
+- 🎨 Customizable design with SCSS support
+- 🌓 Dark mode compatible
+- ✌️ 5 Unique theme support (different styles)
 
 ## 🌟 Features (AZ)
 
@@ -26,9 +36,9 @@
 - 🔊 **Könüllü səs dəstəyi** — işə salındıqda avtomatik olaraq tost səsi səsləndirir
 - ⏱ Konfiqurasiya edilə bilən müddət və mövqe
 - 🧠 Ağıllı tost növləri: `success`, `error`, `info`, və `warn` kimi
-- 🎨 SCSS dəstəyi ilə fərdiləşdirilə bilən dizayn _(TEZLİKLƏ)_
-- 🌓 Qaranlıq rejim uyğunluğu _(TEZLİKLƏ)_
-- 🤖 AI İnteqrasiya _(TEZLİKLƏ)_
+- 🎨 SCSS dəstəyi ilə fərdiləşdirilə bilən dizayn
+- 🌓 Qaranlıq rejim uyğunluğu
+- ✌️ 5 Unikal tema dəstəyi (fərqli stillər)
 
 ---
 
@@ -43,18 +53,14 @@ npm install @azadev/react-toastdev **or** npm i @azadev/react-toastdev
 ## <> Code Example <>
 
 import React from 'react'
-import { useToastdev } from "@azadev/react-toastdev"
+import { toastdev } from "@azadev/react-toastdev"
 
 const App: React.FC = () => {
-  const { notify } = useToastdev();
-
   return (
     <div className='app'>
       <button
         type='button'
-        onClick={() => {
-          notify.success("Successfully Authentification!", { sound: true });
-        }}
+        onClick={() => toastdev.success()}
       >
         TOAST!
       </button>
